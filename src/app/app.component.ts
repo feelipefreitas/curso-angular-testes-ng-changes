@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'curso-angular-testes-ng-changes';
+  value: number = 0;
+  showLimit: boolean = false;
+
+  onValueIncreased(valueIncreased: number) {
+    this.value = valueIncreased;
+  }
+
+  onLimitReached() {
+    this.showLimit = true;
+  }
 }
