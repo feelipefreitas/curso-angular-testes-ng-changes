@@ -12,7 +12,8 @@ export class IncreaseValueComponent implements OnChanges {
   @Output('valueIncreasedEmit') valueIncreasedEmit: EventEmitter<number> = new EventEmitter<number>();
   @Output('limitReachedEmit') limitReachedEmit: EventEmitter<void> = new EventEmitter<void>();
 
-  ngOnChanges(): void {
+
+  ngOnChanges() {
     if(this.value >= 5) {
       this.limitReachedEmit.emit();
     }

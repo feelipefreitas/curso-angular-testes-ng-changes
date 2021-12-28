@@ -23,7 +23,7 @@ describe('IncreaseValueComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should emit the limit', () => {
+  it('should call the "limitReachedEmit.emit"', () => {
     spyOn(component.limitReachedEmit, 'emit');
 
     component.value = 4;

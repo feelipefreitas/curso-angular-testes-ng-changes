@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { IncreaseValueComponent } from './increase-value/increase-value.component';
 
-fdescribe('AppComponent', () => {
+describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
 
@@ -25,15 +25,15 @@ fdescribe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should set the "showLimit" to true', () => {
+  it('should set the "showLimit" to true', () => {
     component.value = 4;
 
     fixture.detectChanges();
 
     expect(component.showLimit).toBe(false);
 
-    const componentIncreaseValue = fixture.debugElement.query(By.directive(IncreaseValueComponent)).componentInstance;
-    componentIncreaseValue.increase();
+    const increaseValueComponent = fixture.debugElement.query(By.directive(IncreaseValueComponent)).componentInstance;
+    increaseValueComponent.increase();
 
     fixture.detectChanges();
 
